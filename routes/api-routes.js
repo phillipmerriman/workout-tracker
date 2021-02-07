@@ -26,6 +26,10 @@ module.exports = function (app) {
       });
   });
 
+  app.update("/exercise:id", (req, res) => {
+      
+  });
+
 }
 
 //only do "/api" when you're doing a put or post
