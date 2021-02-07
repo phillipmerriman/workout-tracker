@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const logger = require("morgan");
 require('dotenv').config(); 
 
+
 const PORT = process.env.PORT || 3000;
 
 // const db = require("./models");
@@ -26,9 +27,11 @@ mongoose.connect(
     }
   );
   
+  // Routes
+// =============================================================
+// require('./routes/api-routes')(app);
+require('./routes/html-routes')(app);
 
 app.listen(PORT, () => {
     console.log(`App running at http://localhost:${PORT}`);
 });
-
-
