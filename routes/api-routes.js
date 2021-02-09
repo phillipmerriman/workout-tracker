@@ -31,6 +31,7 @@ module.exports = function (app) {
     Workout
       .create(req.body)
       .then((data) => {
+        console.log(".then", data);
         res.json(data);
       })
       .catch((err) => {
@@ -39,33 +40,49 @@ module.exports = function (app) {
       });
   });
 
+  // app.put("/api/workouts/:id", (req, res) => {
+  //   console.log("workouts PUT!!!!!!!!!", req.body);
+  //   Workout.findByIdAndUpdate(
+  //     {
+  //       _id: req.params.id
+  //     },
+  //     {
+  //       $push: {
+  //         exercises: res.body
+  //       }
+  //     },
+  //     (error, data) => {
+  //       if (error) {
+  //         res.send(error);
+  //       } else {
+  //         res.json(data);
+  //       }
+  //     }
+  //   );
+  // });
+
   app.put("/api/workouts/:id", (req, res) => {
     console.log("workouts PUT!!!!!!!!!", req.body);
-    Workout.findOneAndUpdate(
+    Workout.findByIdAndUpdate(
       {
         _id: req.params.id
       },
       {
-        $set: {
-          type: req.body.type,
-          name: req.body.name,
-          duration: req.body.duration,
-          weight: req.body.weight,
-          reps: req.body.reps,
-          sets: req.body.sets,
-          modified: Date.now()
+        $push: {
+          exercises: req.body
         }
-      },
-      (error, data) => {
-        if (error) {
-          res.send(error);
-        } else {
-          res.send(data);
-        }
-      }
-    );
+      }) .then((data) => {
+        console.log(".then", data);
+        res.json(data);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.json(404);
+      });
   });
-
 }
+
+
+
 
 //only do "/api" when you're doing a put or post
