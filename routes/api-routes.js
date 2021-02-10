@@ -1,7 +1,10 @@
 const express = require("express");
 const { Workout } = require("../models");
 
+// Export all the routes in one function
 module.exports = function (app) {
+
+  // Get workouts
   app.get("/api/workouts", (req, res) => {
     Workout
       .find({})
@@ -14,6 +17,7 @@ module.exports = function (app) {
       });
   });
 
+  // Get workouts range
   app.get("/api/workouts/range", (req, res) => {
     Workout
       .find({})
@@ -26,6 +30,7 @@ module.exports = function (app) {
       });
   });
 
+  // Create workout
   app.post("/api/workouts", (req, res) => {
     console.log("workouts post!!!!!", req.body);
     Workout
@@ -40,27 +45,7 @@ module.exports = function (app) {
       });
   });
 
-  // app.put("/api/workouts/:id", (req, res) => {
-  //   console.log("workouts PUT!!!!!!!!!", req.body);
-  //   Workout.findByIdAndUpdate(
-  //     {
-  //       _id: req.params.id
-  //     },
-  //     {
-  //       $push: {
-  //         exercises: res.body
-  //       }
-  //     },
-  //     (error, data) => {
-  //       if (error) {
-  //         res.send(error);
-  //       } else {
-  //         res.json(data);
-  //       }
-  //     }
-  //   );
-  // });
-
+  // Update workout by id
   app.put("/api/workouts/:id", (req, res) => {
     console.log("workouts PUT!!!!!!!!!", req.body);
     Workout.findByIdAndUpdate(
@@ -81,8 +66,3 @@ module.exports = function (app) {
       });
   });
 }
-
-
-
-
-//only do "/api" when you're doing a put or post
