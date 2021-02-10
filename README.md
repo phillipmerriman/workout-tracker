@@ -127,4 +127,4 @@ const workoutSchema = new Schema({
 
 - 💼 Phillip Merriman: [portfolio](https://phillipmerriman.github.io/portfolio/)
 - :octocat: Github: [phillipmerriman](https://github.com/phillipmerriman)
-- ![linkedin](public/assets/icons8-linkedin-15.png) LinkedIn: [phillip-merriman-jr](https://www.linkedin.com/in/phillip-merriman-jr-62227485/)
+- ![linkedin](public/assets/icons8-linkedin-20.png) LinkedIn: [phillip-merriman-jr](https://www.linkedin.com/in/phillip-merriman-jr-62227485/)
