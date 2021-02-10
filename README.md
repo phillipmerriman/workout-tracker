@@ -46,16 +46,16 @@ Track your workouts with Workout Tracker. The app will keep track the exercises 
 
 1. Homepage displaying last workout
 
-![Site](public/assets/homepage.png)
+![Site](public\assets\homepage.PNG)
 
 2. Creating Workouts
 
-![Site](public/assets/live.png)
+![Site](public\assets\live.PNG)
 
 
 3. Last Week's Summary
 
-![Site](public/assets/dash.png)
+![Site](public\assets\dash.PNG)
 
 ### Snippets
 
@@ -127,4 +127,4 @@ const workoutSchema = new Schema({
 
 - 💼 Phillip Merriman: [portfolio](https://phillipmerriman.github.io/portfolio/)
 - :octocat: Github: [phillipmerriman](https://github.com/phillipmerriman)
-- <img src="https://img.icons8.com/cute-clipart/64/000000/linkedin.png" style="width:15px;height:15px;" /> LinkedIn: [phillip-merriman-jr](https://www.linkedin.com/in/phillip-merriman-jr-62227485/)
+- <img src="https://img.icons8.com/cute-clipart/64/000000/linkedin.png" style="width:5px;height:5px;" /> LinkedIn: [phillip-merriman-jr](https://www.linkedin.com/in/phillip-merriman-jr-62227485/)
