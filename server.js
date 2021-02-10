@@ -12,11 +12,14 @@ const app = express();
 
 app.use(logger("dev"));
 
+// Parse the application body
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Serve static content for the app from the "public" directory in the application directory
 app.use(express.static("public"));
 
+// Connect to the Mongoose database
 mongoose.connect(
     process.env.MONGODB_URI || 'mongodb://localhost/workout',
     {
@@ -27,11 +30,12 @@ mongoose.connect(
     }
   );
   
-  // Routes
+// Routes
 // =============================================================
 require('./routes/api-routes')(app);
 require('./routes/html-routes')(app);
 
+// Start our server so that it can begin listening to client requests
 app.listen(PORT, () => {
     console.log(`App running at http://localhost:${PORT}`);
 });
