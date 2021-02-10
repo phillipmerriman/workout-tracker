@@ -37,7 +37,7 @@ Track your workouts with Workout Tracker. The app will keep track the exercises 
 4. If you would like to pre-populate the database with seeds, run "npm run seed" in the command line.
 
 <p align="center">
-    <a href="https://mighty-spire-59345.herokuapp.com/?id=6023557c98f2b80015c2a689" target="_blank" ><img src="https://img.shields.io/badge/-👉 See Live Site-success?style=for-the-badge"  alt="Live Site" /></a>
+    <a href="https://mighty-spire-59345.herokuapp.com/?id=6023557c98f2b80015c2a689" target="_blank"><img src="https://img.shields.io/badge/-👉 See Live Site-success?style=for-the-badge"  alt="Live Site" /></a>
 </p>
 
 ## Usage
