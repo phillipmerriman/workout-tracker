@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// Create workout model
 const workoutSchema = new Schema({
   day: {
     type: Date,
@@ -54,6 +55,7 @@ const workoutSchema = new Schema({
 }
 );
 
+// Reduce durations of multiple exercises to total duration of workout
 workoutSchema.virtual("totalDuration").get(function () {
   return this.exercises.reduce((total, exercise) => {
     console.log(total, exercise);
@@ -61,5 +63,6 @@ workoutSchema.virtual("totalDuration").get(function () {
   }, 0);
 });
 
+// Export workout model
 const Workout = mongoose.model("Workout", workoutSchema);
 module.exports = Workout;
