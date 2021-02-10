@@ -46,16 +46,16 @@ Track your workouts with Workout Tracker. The app will keep track the exercises 
 
 1. Homepage displaying last workout
 
-![Site](public\assets\homepage.PNG)
+![Site](public/assets/homepage.PNG)
 
 2. Creating Workouts
 
-![Site](public\assets\live.PNG)
+![Site](public/assets/live.PNG)
 
 
 3. Last Week's Summary
 
-![Site](public\assets\dash.PNG)
+![Site](public/assets/dash.PNG)
 
 ### Snippets
 
