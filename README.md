@@ -56,3 +56,75 @@ Track your workouts with Workout Tracker. The app will keep track the exercises 
 3. Last Week's Summary
 
 ![Site](public/assets/dash.png)
+
+### Snippets
+
+
+1. Adding to an array type
+
+```javascript
+
+    // Create workout model
+const workoutSchema = new Schema({
+  day: {
+    type: Date,
+    default: Date.now,
+  },
+  exercises: [
+    {
+      type: {
+        type: String,
+        required: true,
+      },
+
+      name: {
+        type: String,
+        required: true,
+        trim: true,
+      },
+
+      duration: {
+        type: Number,
+        required: true,
+      },
+
+      distance: {
+        type: Number,
+        required: true,
+      },
+
+      weight: {
+        type: Number,
+        required: true,
+      },
+
+      reps: {
+        type: Number,
+        required: true,
+      },
+
+      sets: {
+        type: Number,
+        required: true,
+      },
+    },
+  ],
+  
+},
+{
+  toJSON: {
+    virtuals: true,
+  },
+}
+);
+    
+```
+* This is the Mongoose model used to create workouts.
+
+## Credits
+
+### Author
+
+- 💼 Phillip Merriman: [portfolio](https://phillipmerriman.github.io/portfolio/)
+- :octocat: Github: [phillipmerriman](https://github.com/phillipmerriman)
+- <img src="https://img.icons8.com/cute-clipart/64/000000/linkedin.png" style="width:15px;height:15px;" /> LinkedIn: [phillip-merriman-jr](https://www.linkedin.com/in/phillip-merriman-jr-62227485/)
