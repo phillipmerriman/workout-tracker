@@ -18,7 +18,7 @@
 
 ## Description
 
-Track your workouts with Workout Tracker. The app will keep track the exercises in your workout. The dashboard displays graphs that summarize your weekly workouts.
+Track your workouts with Workout Tracker. The app will keep track of the exercises in your workout. The dashboard displays graphs that summarize your weekly workouts.
 
 ## Table of Contents
 
